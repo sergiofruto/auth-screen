@@ -4,9 +4,58 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
+    <header>
+      <h1 class="header-logo">
+        <a href="#">
+          <svg width="27px" height="31px" viewBox="50 31 27 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M70.8400725,55.2693135 L67.8939954,45.9995532 L75.6058987,40.2720838 L66.0731973,40.2720838 L63.1269454,31.002681 L63.1260711,31.0001787 L72.6601712,31.0001787 L75.6071226,40.2711902 L75.6072974,40.2710114 L75.6097452,40.2695816 C77.3210926,45.6479872 75.5585167,51.7652712 70.8400725,55.2693135 L70.8400725,55.2693135 L70.8400725,55.2693135 Z M55.4131188,55.2693135 L55.410671,55.2711008 L63.1244976,61 L70.8400725,55.2694922 L63.1269454,49.5404143 L55.4131188,55.2693135 L55.4131188,55.2693135 Z M50.6453694,40.2697603 L50.6453694,40.2697603 C48.8438039,45.9393205 50.9350815,51.946863 55.4115452,55.2703859 L55.4122446,55.2675262 L58.3586714,45.998302 L50.6485165,40.2719051 L60.178945,40.2719051 L63.1253718,31.0025022 L63.1260711,31 L53.5914465,31 L50.6453694,40.2697603 L50.6453694,40.2697603 Z" id="Shape" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </h1>
+      <div class="sorting-menu">
+        <label for="sort-menu">Order by</label>
+        <div class="select-wrapper">
+          <select name="sort-menu">
+            <option>Position</option>
+            <option>Name</option>
+          </select>
+          <svg class="select-arrow"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve" width="512px" height="512px">
+            <g>
+              <polygon points="46,3.004 0,3 23.002,43"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="card">
+        <div class="card__background"></div>
+        <div class="card__content">
+          <img class="card__image" src="images/sarah_drasner.jpg" alt="" />
+          <h2 class="card__heading">Sarah Drasner</h2>
+          <span class="card__subheading">Engineer</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__background"></div>
+        <div class="card__content">
+          <img class="card__image" src="images/chris_coyier.jpg" alt="" />
+          <h2 class="card__heading">John Doe</h2>
+          <span class="card__subheading">Marketer</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__background"></div>
+        <div class="card__content">
+          <img class="card__image" src="images/una_kravets.jpg" alt="" />
+          <h2 class="card__heading">John Doe</h2>
+          <span class="card__subheading">Devops</span>
+        </div>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

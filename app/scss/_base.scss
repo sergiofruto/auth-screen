@@ -179,8 +179,13 @@ header {
     font-weight: normal;
     text-align: center;
     letter-spacing: 0.2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @include breakpoint($tablet) {
+      max-width: 30%;
+      margin-left: 0;
       text-align: left;
     }
   }

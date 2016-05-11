@@ -32,10 +32,10 @@
 
 @font-face {
 	font-family: 'Avenir Next Ultra';
-	src: url('AvenirNext-UltraLight.eot');
-	src: url('AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'),
-		url('AvenirNext-UltraLight.woff') format('woff'),
-		url('AvenirNext-UltraLight.ttf') format('truetype');
+	src: url('/fonts/AvenirNext-UltraLight.eot');
+	src: url('/fonts/AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/AvenirNext-UltraLight.woff') format('woff'),
+		url('/fonts/AvenirNext-UltraLight.ttf') format('truetype');
 	font-weight: 200;
 	font-style: normal;
 }
