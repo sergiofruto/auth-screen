@@ -16,14 +16,29 @@
         </a>
       </h1>
       <div class="sorting-menu">
-        <label for="sort-menu">Sort by</label>
-        <select class="" name="sort-menu">
-          <option>Position</option>
-          <option>Name</option>
-        </select>
+        <label for="sort-menu">Order by</label>
+        <div class="select-wrapper">
+          <select name="sort-menu">
+            <option>Position</option>
+            <option>Name</option>
+          </select>
+          <svg class="select-arrow"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 46 46" style="enable-background:new 0 0 46 46;" xml:space="preserve" width="512px" height="512px">
+            <g>
+              <polygon points="46,3.004 0,3 23.002,43"/>
+            </g>
+          </svg>
+        </div>
       </div>
     </header>
     <div class="main-content">
+      <div class="card">
+        <div class="card__background"></div>
+        <div class="card__content">
+          <img class="card__image" src="images/sarah_drasner.jpg" alt="" />
+          <h2 class="card__heading">Sarah Drasner</h2>
+          <span class="card__subheading">Engineer</span>
+        </div>
+      </div>
       <div class="card">
         <div class="card__background"></div>
         <div class="card__content">
@@ -33,14 +48,12 @@
         </div>
       </div>
       <div class="card">
-        <img class="card__image" src="images/chris_coyier.jpg" alt="" />
-        <h2 class="card__heading">John Doe</h2>
-        <span class="card__subheading">Marketer</span>
-      </div>
-      <div class="card">
-        <img class="card__image" src="images/chris_coyier.jpg" alt="" />
-        <h2 class="card__heading">John Doe</h2>
-        <span class="card__subheading">Marketer</span>
+        <div class="card__background"></div>
+        <div class="card__content">
+          <img class="card__image" src="images/una_kravets.jpg" alt="" />
+          <h2 class="card__heading">John Doe</h2>
+          <span class="card__subheading">Devops</span>
+        </div>
       </div>
     </div>
     <!--build:js js/main.min.js -->

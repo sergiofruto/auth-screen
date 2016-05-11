@@ -8,14 +8,39 @@ body {
   box-sizing: border-box;
 }
 
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+header {
+  padding: 24px 0 22px;
+  @extend %clearfix;
+
+  @include breakpoint($tablet) {
+    padding: 30px 48px 22px;
+  }
+}
+
 .header-logo {
-  margin: 23px 0;
+  margin: 0;
+
+  @include breakpoint($tablet) {
+    display: inline-block;
+  }
 
   a,
   svg {
     display: block;
     margin: 0 auto;
     height: 24px;
+
+    @include breakpoint($tablet) {
+      height: 31px;
+    }
   }
 }
 
@@ -23,31 +48,84 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px 10px;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   box-shadow: 0px -1px 4px rgba(0,0,0,0.2);
   background-color: white;
+  z-index: 10;
+
+  @include breakpoint($tablet) {
+    position: relative;
+    float: right;
+    width: auto;
+    padding: 0;
+    color: $white;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  label {
+    font-weight: 200;
+  }
+
+  .select-wrapper {
+    display: inline-block;
+    position: relative;
+  }
 
   select {
+    position: relative;
+    padding-right: 16px;
     border: 0;
     font-family: 'Avenir Next';
-    font-size: 18px;
+    font-size: 20px;
     font-weight: normal;
     background-color: transparent;
+    -webkit-appearance: none;
+    color: inherit;
+    letter-spacing: 0.5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .select-arrow{
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 7px;
+    margin-top: -3.5px;
+    fill: #000;
+
+    @include breakpoint($tablet) {
+      fill: $white;
+    }
   }
 }
 
 .main-content {
   padding: 0 10px 47px;
+
+  @include breakpoint($tablet) {
+    padding: 0 48px 0;
+  }
 }
 
 .card {
   position: relative;
+  overflow: hidden;
   padding: 30px;
   margin: 0 0 10px;
   background-color: white;
-  border-radius: 2px;
+  border-radius: 4px;
+
+  @include breakpoint($tablet) {
+    padding: 36px 40px;
+  }
 
   &__background {
     position: absolute;
@@ -58,11 +136,29 @@ body {
     z-index: 1;
     background-image: url('../images/back-01.jpg');
     background-size: cover;
+    transform: scale(1.1);
+    -webkit-filter: blur(4px);
+  }
+
+  &:nth-child(2) {
+    .card__background {
+      background-image: url('../images/back-02.jpg');
+    }
+  }
+
+  &:nth-child(3) {
+    .card__background {
+      background-image: url('../images/back-03.jpg');
+    }
   }
 
   &__content {
     position: relative;
     z-index: 2;
+
+    @include breakpoint($tablet) {
+      min-height: 162px;
+    }
   }
 
   &__image {
@@ -70,18 +166,33 @@ body {
     width: 85px;
     margin: 0 auto 26px;
     border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+    @include breakpoint($tablet) {
+      @include center;
+    }
   }
 
   &__heading {
     margin: 0 0 4px;
+    font-size: 25px;
     font-weight: normal;
     text-align: center;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.2px;
+
+    @include breakpoint($tablet) {
+      text-align: left;
+    }
   }
 
   &__subheading {
     display: block;
     font-size: 18px;
     text-align: center;
+    opacity: 0.5;
+
+    @include breakpoint($tablet) {
+      text-align: left;
+    }
   }
 }
